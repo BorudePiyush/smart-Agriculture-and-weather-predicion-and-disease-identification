@@ -1,8 +1,7 @@
-streamlit
-tensorflow
-numpy
+streamlit==1.26.0
+tensorflow==2.15.0
 pillow
-rich==13.7.1       # ✅ compatible version
-markdown-it-py==3.0.0
-mdurl==0.1.2
-pygments==2.19.2
+numpy>=1.26.0
+scikit-learn
+pandas
+matplotlib
