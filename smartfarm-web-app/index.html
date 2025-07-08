@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartFarm</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+<script src="js/firebaseConfig.js"></script>
+
+  </head>
+
+  <body>
+    <!-- navbar sections starts  -->
+    <header class="header">
+      <div class="logo">
+        <h1>SmartFarm</h1>
+      </div>
+
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#footer">Contact</a>
+        <a href="explore/index.html" class="btn">EXPLORE NOW</a>
+      </nav>
+
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </header>
+    <!-- navbar sections ends  -->
+
+    <!-- home section stars  -->
+
+    <section class="home" id="home">
+      <div class="content">
+        <h1>YOUR SMART FARMING ASSISTANT</h1>
+        <p>Smart Crops, Smart Choices with AgriSens!</p>
+
+        <a href="guide/index.html" class="home-btn" target="_blank "
+          >Smart Farming guide</a
+        >
+      </div>
+
+      <!-- <div class="image">
+        <img class="image" src="images/banner2.jpg" alt="heading-image" />
+      </div> -->
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- features sectin starts  -->
+
+    <section class="features" id="features">
+      <div class="heading">
+        <h1>Features</h1>
+        <p>
+         Smartfarm provides farmers with essential tools for smarter farming. It
+          offers personalized crop recommendations based on soil and climate,
+          helps identify plant diseases through image analysis, and provides
+          real-time weather forecasts. The app also includes features for crop
+          planning and guidance, ensuring optimal farming decisions for better
+          yields and healthier crops.
+        </p>
+      </div>
+
+      <div class="button-container0">
+        <a href="https://smartfarm-py-qlsudb3epngwub2yitslh2.streamlit.app/"
+          >Crop Recommendations</a
+        >
+        <a
+          href="https://smartfarm-6nic4jwz4wlkgxl8tjpjqf.streamlit.app/"
+          class="buttonn"
+          >Identify Plant Diseases</a
+        >
+        <a href="weather-forecast/index.html" class="buttonn"
+          >Today's Weather Forecast</a
+        >
+       
+        <a href="guide/index.html" class="buttonn">Smart Farming Guidance</a>
+      </div>
+
+     <div class="row">
+  <!-- Video Section -->
+  <div class="video">
+    <video src="images/farm.mp4" autoplay muted loop></video>
+  </div>
+
+  <!-- Content Section -->
+  <div class="content">
+    <h1>Weather Forecast</h1>
+    <p>
+      Plan Your Farming With Precision! Check Real-Time Weather Insights
+      On Temperature, Humidity, And More. Integrated With Our
+      Crop-Prediction Model For Optimal Decisions. Explore Historical
+      Data, Get Alerts, And Access Educational Resources.
+    </p>
+    <a href="#" class="all-btn">more info</a>
+  </div>
+</div>
+        <!-- 0 Tab  -->
+
+        <!-- 1 Tab  -->
+
+       <!-- 1 Tab -->
+<div class="row">
+  <div class="content">
+    <h1>Smart Crop Planning</h1>
+    <p>
+      Harness the power of data analysis to predict crop suitability,
+      providing insights into optimal cultivation conditions. AgriSens
+      optimizes farming decisions based on comprehensive factors like soil
+      quality, weather, and more.
+    </p>
+    <a href="#" class="all-btn">more info</a>
+  </div>
+  <div class="image">
+    <img src="images/mean.jpg" alt="crop-planning" class="rounded-corner-image" />
+  </div>
+</div>
+
+<!-- 2 Tab -->
+<div class="row">
+  <div class="image">
+    <img src="images/green.jpg" alt="Disease-Detection" class="rounded-corner-image" />
+  </div>
+  <div class="content">
+    <h1>Plant Disease Identification</h1>
+    <p>
+      Assist farmers in detecting plant diseases by enabling image
+      uploads, utilizing this analysis for prompt and precise
+      identification, enhancing farming efficiency and crop management.
+    </p>
+    <a href="#" class="all-btn">more info</a>
+  </div>
+</div>
+
+<!-- 3 Tab -->
+<div class="row">
+  <div class="content">
+    <h1>Smart Farming, Simple Guidance</h1>
+    <p>
+      Smart Crop Guide offers a simple, step-by-step plan for growing
+      crops. It provides expert planting tips, tracks growth stages, and
+      sends watering reminders. The app also gives pest control advice,
+      harvest timing, weather updates, and fertilizer recommendations to
+      ensure healthy crops.
+    </p>
+    <a href="#" class="all-btn">more info</a>
+  </div>
+  <div class="image">
+    <img src="images/sustain.jpg" alt="ranked-recommendations" class="rounded-corner-image" />
+  </div>
+</div>
+
+<!-- 4 Tab -->
+<div class="row">
+  <div class="image">
+    <img src="images/Deforestation.jpg" alt="modern-farms" class="rounded-corner-image" />
+  </div>
+  <div class="content">
+    <h1>Innovations for Modern Farms</h1>
+    <p>
+      Smart Crop Tech, Precision Farming, and Customizable Solutions for
+      Sustainable and Efficient Agriculture!
+    </p>
+    <a href="#" class="all-btn">more info</a>
+  </div>
+</div>
+
+<!-- 5 Tab -->
+<div class="row">
+  <div class="content">
+    <h1>User-Friendly Interface</h1>
+    <p>
+      Our application features a user-friendly interface designed for
+      farmers of all technological backgrounds. With simple inputs like
+      location and crop selection, users can effortlessly access detailed
+      information on crop suitability and recommended planting schedules.
+    </p>
+    <a href="#" class="all-btn">more info</a>
+  </div>
+  <div class="image">
+    <img src="images/hand.jpg" alt="user-friendly" class="rounded-corner-image" />
+  </div>
+</div>
+
+    </section>
+
+    <!-- features sectin ends -->
+
+    <!-- about section starts  -->
+
+   
+
+    <!-- about section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer" id="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#home"><i class="fas fa-chevron-right"></i>home</a>
+          <a href="#features"><i class="fas fa-chevron-right"></i>features</a>
+          <a href="#about"><i class="fas fa-chevron-right"></i>about</a>
+        </div>
+
+        <div class="box">
+          <h3>extra links</h3>
+          <a href="#"><i class="fas fa-chevron-right"></i>ask questions</a>
+          <a href="#"><i class="fas fa-chevron-right"></i>terms of use</a>
+          <a href="#"><i class="fas fa-chevron-right"></i>privacy policy</a>
+        </div>
+
+        <div class="box">
+          <h3>Helpful Resources</h3>
+          <a href="#"><i class="fas fa-chevron-right"></i> FAQs</a>
+          <a href="#"><i class="fas fa-chevron-right"></i> User Guides</a>
+          <a href="#"><i class="fas fa-chevron-right"></i> Support Center</a>
+        </div>
+
+        <div class="box">
+          <h3>Stay Connected</h3>
+          <a href="#"><i class="fas fa-chevron-right"></i> Future Scope</a>
+          <a href="#"><i class="fas fa-chevron-right"></i> Community Forum</a>
+          <a href="#"><i class="fas fa-chevron-right"></i> Newsletter</a>
+        </div>
+      </div>
+
+      <div class="credit">
+        © Copyright – All Rights Reserved
+        <a href="" target="_blank"><span>Team SmartFarm</span> </a>
+      </div>
+    </section>
+
+    <!-- footer section ends -->
+      <script src="script.js"></script>
+    </chat>
+
+    <!--Chat-bot-->
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

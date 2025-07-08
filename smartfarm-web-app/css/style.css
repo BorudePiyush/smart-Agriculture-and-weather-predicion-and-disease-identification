@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root {
+  --deep-green: #006400;           /* Deep forest green */
+  --primary-green: #28a745;        /* Leafy green */
+  --sky-blue: #30a2ff;             /* Clear sky blue */
+  --light-blue: #ebf8ff;           /* Gentle background blue */
+  --gray: #555;                    /* Muted gray text */
+  --light-gray: #f9f9f9;           /* Soft background */
+  --dark-blue: #1a202c;            /* Rich dark text */
+  --soft-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --danger-red: #e63946;           /* Alert color for hover */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--light-gray);
+  color: var(--dark-blue);
+}
+
+/* Header */
+.header {
+  background: var(--sky-blue);
+  padding: 2rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--soft-shadow);
+}
+
+.logo h1 {
+  color: #fff;
+  font-weight: 700;
+}
+
+.navbar a {
+  color: #fff;
+  font-weight: 500;
+  margin-left: 2rem;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--primary-green);
+}
+
+.navbar .btn {
+  background: var(--danger-red);
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.navbar .btn:hover {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+/* Home Section */
+.home {
+  min-height: 100vh;
+  width: 100%;
+  background: url('../images/banner2.jpg') no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8rem; /* space for fixed navbar */
+  position: relative;
+  z-index: 1;
+}
+
+.features {
+  background: linear-gradient(135deg, #ebf8ff, #c6f6d5, #f0fff4);
+  padding: 5rem 9%;
+  border-radius: 2rem;
+  box-shadow: var(--soft-shadow);
+}
+
+
+
+.home .content {
+  z-index: 2;
+  color: white;
+  max-width: 800px;
+}
+
+.home h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+.home p {
+  font-size: 1.8rem;
+  margin: 1rem 0 2rem;
+}
+
+.home-btn {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  background-color: var(--primary-green);
+  border-radius: 50px;
+  color: white;
+  transition: background-color 0.3s;
+  font-weight: 600;
+}
+
+.home-btn:hover {
+  background-color: var(--deep-green);
+}
+
+/* Features */
+
+
+.features .heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.features .heading h1 {
+  font-size: 3rem;
+  color: var(--deep-green);
+}
+
+.features .heading p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--gray);
+  font-size: 1.6rem;
+}
+
+/* Buttons under features */
+.button-container0 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3rem 0;
+  gap: 1rem;
+}
+
+.buttonn {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 30px;
+  background-color: white;
+  color: var(--sky-blue);
+  border: 2px solid var(--sky-blue);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.buttonn:hover,
+.buttonn.active {
+  background-color: var(--sky-blue);
+  color: white;
+}
+
+/* Feature Rows */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  box-shadow: var(--soft-shadow);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+/* Alternating Backgrounds */
+.features .row:nth-of-type(1) {
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+}
+
+.features .row:nth-of-type(2) {
+  background: linear-gradient(to right, #e8f5e9, #ffffff);
+}
+
+.features .row:nth-of-type(3) {
+  background: linear-gradient(to right, #fff3e0, #ffffff);
+}
+
+.features .row:nth-of-type(4) {
+  background: linear-gradient(to right, #f3e5f5, #ffffff);
+}
+
+.features .row:nth-of-type(5) {
+  background: linear-gradient(to right, #ede7f6, #ffffff);
+}
+
+.features .row:nth-of-type(6) {
+  background: linear-gradient(to right, #fce4ec, #ffffff);
+}
+
+/* Feature Images */
+/* For video in feature row */
+.row .video {
+  flex: 1 1 45%;
+}
+
+.row .video video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--soft-shadow);
+  object-fit: cover;
+  max-height: 300px; /* or whatever height fits your layout */
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.row .image,
+.row .content {
+  flex: 1 1 45%;
+}
+
+.rounded-corner-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--soft-shadow);
+}
+
+
+/* Feature Content */
+.row .content {
+  flex: 1 1 45%;
+}
+
+.row .content h1 {
+  font-size: 2.5rem;
+  color: var(--dark-blue);
+}
+
+.row .content p {
+  font-size: 1.4rem;
+  color: var(--gray);
+  margin: 1.5rem 0;
+  line-height: 1.6;
+}
+
+/* Feature Button */
+.all-btn {
+  background-color: var(--primary-green);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.all-btn:hover {
+  background-color: var(--deep-green);
+}
+/* Footer */
+.footer {
+  background-color: var(--dark-blue);
+  color: #fff;
+  padding: 5rem 9% 2rem;
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 3rem;
+}
+
+.footer .box h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-green);
+}
+
+.footer .box a {
+  color: #ddd;
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.footer .box a i {
+  color: var(--primary-green);
+  margin-right: 0.5rem;
+}
+
+.footer .box a:hover {
+  color: var(--danger-red);
+}
+
+.footer .credit {
+  text-align: center;
+  margin-top: 3rem;
+  border-top: 1px solid #aaa;
+  padding-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.footer .credit span {
+  color: var(--primary-green);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .home h1 {
+    font-size: 3rem;
+  }
+
+  .home p {
+    font-size: 1.4rem;
+  }
+}
