@@ -3,9 +3,8 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 import os
-from tensorflow.keras.layers import Rescaling  # Include if used in training
 
-# Set page config (must be the first Streamlit command)
+# Set page config
 st.set_page_config(page_title="SmartFarm Disease Detection", layout="centered")
 
 # Hide Streamlit main menu and footer
@@ -17,15 +16,15 @@ footer {visibility: hidden;}
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# Load the model once (use caching + error handling)
+# Load the model using SavedModel format (folder)
 @st.cache_resource
 def load_model():
-    model_path = os.path.join(os.path.dirname(__file__), "trained_plant_disease_model.keras")
+    model_path = os.path.join(os.path.dirname(__file__), "trained_plant_disease_model")
     try:
-        model = tf.keras.models.load_model(model_path, custom_objects={'Rescaling': Rescaling})
+        model = tf.keras.models.load_model(model_path)
         return model
     except Exception as e:
-        st.error("❌ Failed to load the model. Check if the model file exists and is valid.")
+        st.error("❌ Failed to load the model. Make sure the folder exists and is valid.")
         st.exception(e)
         return None
 
@@ -33,10 +32,10 @@ def load_model():
 def model_prediction(test_image):
     model = load_model()
     if model is None:
-        return None  # Exit if model not loaded
+        return None
     image = tf.keras.preprocessing.image.load_img(test_image, target_size=(128, 128))
     input_arr = tf.keras.preprocessing.image.img_to_array(image)
-    input_arr = np.array([input_arr])  # Convert to batch format
+    input_arr = np.expand_dims(input_arr, axis=0)  # Add batch dimension
     predictions = model.predict(input_arr)
     return np.argmax(predictions)
 
