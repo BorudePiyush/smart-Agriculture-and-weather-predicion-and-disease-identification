@@ -16,7 +16,7 @@ footer {visibility: hidden;}
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# Load the model using SavedModel format (folder)
+# Load model from SavedModel folder (not .keras file)
 @st.cache_resource
 def load_model():
     model_path = os.path.join(os.path.dirname(__file__), "trained_plant_disease_model")
@@ -35,11 +35,11 @@ def model_prediction(test_image):
         return None
     image = tf.keras.preprocessing.image.load_img(test_image, target_size=(128, 128))
     input_arr = tf.keras.preprocessing.image.img_to_array(image)
-    input_arr = np.expand_dims(input_arr, axis=0)  # Add batch dimension
+    input_arr = np.expand_dims(input_arr, axis=0)
     predictions = model.predict(input_arr)
     return np.argmax(predictions)
 
-# Sidebar
+# Sidebar navigation
 st.sidebar.title("🌾 SmartFarm")
 app_mode = st.sidebar.selectbox("Navigate", ["🏠 Home", "🦠 Disease Recognition"])
 
@@ -52,7 +52,7 @@ if app_mode == "🏠 Home":
     st.markdown("**Location**: India")
     st.markdown("**Status**: Active profile")
 
-# Disease Recognition Page
+# Disease Detection Page
 elif app_mode == "🦠 Disease Recognition":
     st.header("📸 Upload Plant Image")
     test_image = st.file_uploader("Choose an Image:", type=["jpg", "jpeg", "png"])
@@ -69,7 +69,6 @@ elif app_mode == "🦠 Disease Recognition":
             if result_index is None:
                 st.error("Prediction failed due to model loading issue.")
             else:
-                # Class labels
                 class_name = [
                     'Apple___Apple_scab', 'Apple___Black_rot', 'Apple___Cedar_apple_rust', 'Apple___healthy',
                     'Blueberry___healthy', 'Cherry_(including_sour)___Powdery_mildew',
@@ -86,5 +85,4 @@ elif app_mode == "🦠 Disease Recognition":
                     'Tomato___Target_Spot', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Tomato___Tomato_mosaic_virus',
                     'Tomato___healthy'
                 ]
-
                 st.success(f"🌱 Model Prediction: **{class_name[result_index]}**")
