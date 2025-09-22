@@ -45,7 +45,7 @@ smart-Agriculture-and-weather-predicion-and-disease-identification/
 
 ## 🏗️ Architecture Overview
 
-See [ARCHITECTURE.md](ARCHITECTURE.md) for a detailed diagram and description.
+[![View Architecture](https://img.shields.io/badge/View%20Architecture-ARCHITECTURE.md-blue?style=for-the-badge)](ARCHITECTURE.md)
 
 **High-Level Flow:**
 
